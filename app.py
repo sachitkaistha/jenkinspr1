@@ -1,11 +1,12 @@
-import flask from Flask
+from flask import Flask
 
-app=Flask(__name__)
+app = Flask(__name__)
 
 @app.route("/info")
-def function():
-    return "hi there welcome to my app"
-app.launch("0.0.0.0")
+def username():
+    return "Hello"
 
-
-
+@app.route("/container")
+def con_id():
+    return "Container"
+app.run()
